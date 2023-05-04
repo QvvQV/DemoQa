@@ -10,6 +10,7 @@ class DemoQa(BasePage):
 
         self.icon = WebElement(driver, '#app > header > a')
         self.btn_elements = WebElement(driver, '#app > div > div > div.home-body > div > div:nth-child(1)')
+        self.get_text = WebElement('© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.')
 
 
     def click_on_the_icon(self):
@@ -22,6 +23,11 @@ class DemoQa(BasePage):
         if self.get_url() == self.base_url:
             return True
         return False
+
+    def podval_check_text(self):
+        if self.get_text == '© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.':
+            return False
+        return True
 
     # def exist_icon(self):
     #  try:

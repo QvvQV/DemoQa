@@ -1,5 +1,5 @@
-from selenium.webdriver.common.by import By
-import time
+#from selenium.webdriver.common.by import By
+#import time
 
 class BasePage:
 
@@ -8,11 +8,12 @@ class BasePage:
         self.base_url = base_url #'https://demoqa.com/'
 
 
+
     def visit(self):
         return self.driver.get(self.base_url)
 
     def get_url(self):
-       return self.driver.current_url
+        return self.driver.current_url
 
 
   #def find_element(self, locator):
