@@ -1,6 +1,5 @@
 from pages.demoqa import DemoQa
 from pages.elements_page import ElementsPage
-from components.components import WebElement
 
 def test_check_text(browser):
     demo_qa_page = DemoQa(browser)
