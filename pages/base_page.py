@@ -12,8 +12,21 @@ class BasePage:
     def visit(self):
         return self.driver.get(self.base_url)
 
+    def back(self):
+        self.driver.back()
+
+    def forward(self):
+        self.driver.forward()
+
+    def refresh(self):
+        self.driver.refresh()
+
     def get_url(self):
         return self.driver.current_url
+
+
+    def get_title(self):
+        return self.driver.title
 
 
   #def find_element(self, locator):
