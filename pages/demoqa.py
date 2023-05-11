@@ -8,6 +8,9 @@ class DemoQa(BasePage):
         self.base_url = 'https://demoqa.com/'
         super ().__init__(driver, self.base_url)
 
+        self.pageData = {
+            'title': 'DEMOQA'
+        }
         self.icon = WebElement(driver, '#app > header > a')
         self.btn_elements = WebElement(driver, '#app > div > div > div.home-body > div > div:nth-child(1)')
         self.get_text = WebElement('© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.')
