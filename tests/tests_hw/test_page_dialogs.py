@@ -15,7 +15,7 @@ def test_navigation_modal(browser):
     demo_qa_page = DemoQa(browser)
 
     modal_dialog_page.visit()
-    #browser.refresh()
+    browser.refresh()
 
     modal_dialog_page.icon.click()
     browser.back()
