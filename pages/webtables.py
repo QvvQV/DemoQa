@@ -29,10 +29,11 @@ class Webtables(BasePage):
         self.stroki_na_str = WebElement(driver, '#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div.web-tables-wrapper > div.ReactTable.-striped.-highlight > div.pagination-bottom > div > div.-center > span.select-wrap.-pageSizeOptions > select')
         self.five_row = WebElement(driver, '#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div.web-tables-wrapper > div.ReactTable.-striped.-highlight > div.pagination-bottom > div > div.-center > span.select-wrap.-pageSizeOptions > select > option:nth-child(1)')
 
-        #self.btn_next = WebElement(driver, '//input[@type=''button'' and @name=''sendBtn'' and @disabled]')
-        self.btn_next = WebElement(driver,'#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div.web-tables-wrapper > div.ReactTable.-striped.-highlight > div.pagination-bottom > div > div.-next > button')
-        #self.btn_previous = WebElement(driver,'//*[@id="app"]/div/div/div[2]/div[2]/div[2]/div[3]/div[2]/div/div[1]/button')
-        self.btn_previous = WebElement(driver,'#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div.web-tables-wrapper > div.ReactTable.-striped.-highlight > div.pagination-bottom > div > div.-previous > button')
+        self.btn_next = WebElement(driver,'div.-next > button')
+        self.btn_previous = WebElement(driver,'div.-previous > button')
+
+        self.page2 = WebElement(driver, '#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div.web-tables-wrapper > div.ReactTable.-striped.-highlight > div.pagination-bottom > div > div.-center > span.-pageInfo > div > input[type=number]')
+        self.page_all = WebElement(driver,'span.-pageInfo > span')
 
 
 

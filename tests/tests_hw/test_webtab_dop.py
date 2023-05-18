@@ -10,9 +10,9 @@ def test_web_dop(browser):
     time.sleep(2)
 
     assert not webtables_page.btn_next.click()
-   # assert webtables_page.btn_next.get_dom_attribute('btn') == 'disabled'
+    assert webtables_page.btn_next.get_dom_attribute('disabled')
     assert not webtables_page.btn_previous.click()
-    #assert webtables_page.btn_previous.get_dom_attribute('class') == 'disabled'
+    assert webtables_page.btn_previous.get_dom_attribute('disabled')
 
     #добавление первой записи
     for i in range (3):
@@ -30,7 +30,12 @@ def test_web_dop(browser):
         webtables_page.btn_dialog_submit.click()
         time.sleep(2)
 
+    assert not webtables_page.btn_next.get_dom_attribute('disabled')
+    assert webtables_page.page_all.get_text() == '2'
+
     webtables_page.btn_next.click()
+    assert webtables_page.page2.get_dom_attribute('value') == '2'
     time.sleep(2)
     webtables_page.btn_previous.click()
     time.sleep(2)
+    assert webtables_page.page2.get_dom_attribute('value') == '1'
