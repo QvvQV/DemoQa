@@ -35,6 +35,13 @@ class Webtables(BasePage):
         self.page2 = WebElement(driver, 'input[type=number]')
         self.page_all = WebElement(driver,'span.-pageInfo > span')
 
+        self.zapis = WebElement(driver, 'div.rt-noData')
+
+        self.DELETE = {
+            'title': 'Delete'
+        }
+        self.btn_delete_1 = WebElement(driver, '//*[@id="delete-record-1"]/svg/path')
+
 
 
 

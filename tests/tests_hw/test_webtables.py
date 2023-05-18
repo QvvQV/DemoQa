@@ -39,3 +39,18 @@ def test_form(browser):
     #проверка на пустое поле
     assert webtables_page.new_pole.get_text() == ' '
 
+def test_no_rows(browser):
+    w_p = Webtables(browser)
+
+    w_p.visit()
+    assert not w_p.zapis.exist()
+
+    while w_p.btn_delete_1.exist():
+        w_p.btn_delete_1.click()
+
+    time.sleep(2)
+
+    assert w_p.zapis.exist()
+
+
+
