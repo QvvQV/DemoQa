@@ -35,6 +35,9 @@ class WebElement:
     def visible(self):
         return self.find_element().is_displayed()
 
+    def check_css(self, style, value=''):
+        return self.find_element().value_of_css_property(style) == value
+
     def check_count_elements(self, count: int):
         if len(self.find_elements()) == count:
             return True
