@@ -22,17 +22,17 @@ class Webtables(BasePage):
         self.salary = WebElement(driver, '#salary')
         self.departament = WebElement(driver, '#department')
 
-        self.new_pole = WebElement(driver, '#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div.web-tables-wrapper > div.ReactTable.-striped.-highlight > div.rt-table > div.rt-tbody > div:nth-child(4) > div > div:nth-child(1)')
+        self.new_pole = WebElement(driver, 'div.rt-tbody > div:nth-child(4) > div > div:nth-child(1)')
         self.btn_karandash = WebElement(driver, '#edit-record-4 > svg')
-        self.pole_s_dannimi = WebElement(driver,'body > div.fade.modal.show > div > div > div.modal-header')
+        self.pole_s_dannimi = WebElement(driver,'div.modal-header')
 
-        self.stroki_na_str = WebElement(driver, '#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div.web-tables-wrapper > div.ReactTable.-striped.-highlight > div.pagination-bottom > div > div.-center > span.select-wrap.-pageSizeOptions > select')
-        self.five_row = WebElement(driver, '#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div.web-tables-wrapper > div.ReactTable.-striped.-highlight > div.pagination-bottom > div > div.-center > span.select-wrap.-pageSizeOptions > select > option:nth-child(1)')
+        self.stroki_na_str = WebElement(driver, 'span.select-wrap.-pageSizeOptions > select')
+        self.five_row = WebElement(driver, 'select > option:nth-child(1)')
 
         self.btn_next = WebElement(driver,'div.-next > button')
         self.btn_previous = WebElement(driver,'div.-previous > button')
 
-        self.page2 = WebElement(driver, '#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div.web-tables-wrapper > div.ReactTable.-striped.-highlight > div.pagination-bottom > div > div.-center > span.-pageInfo > div > input[type=number]')
+        self.page2 = WebElement(driver, 'input[type=number]')
         self.page_all = WebElement(driver,'span.-pageInfo > span')
 
 
