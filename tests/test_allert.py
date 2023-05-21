@@ -42,3 +42,14 @@ def test_promt(browser):
     d_prom.alert().accept()
     assert d_prom.promt_res.get_text() == 'You entered Vadim'
     time.sleep(2)
+
+def test_time(browser):
+    d_time = Alert(browser)
+
+    d_time.visit()
+    assert not d_time.alert()
+    d_time.btn_time.click()
+    time.sleep(6)
+    d_time.alert().accept()
+    assert not d_time.alert()
+    time.sleep(2)

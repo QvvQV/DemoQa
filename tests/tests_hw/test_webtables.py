@@ -52,5 +52,13 @@ def test_no_rows(browser):
 
     assert w_p.zapis.exist()
 
+def test_sort(browser):
+    d_sort = Webtables(browser)
+
+    d_sort.visit()
+    assert not d_sort.alert()
+    d_sort.table_fname.click()
+    assert d_sort.table_fname.get_dom_attribute('class') =='rt-resizable-header-content'
+
 
 

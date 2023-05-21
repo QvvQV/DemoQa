@@ -42,6 +42,10 @@ class Webtables(BasePage):
         }
         self.btn_delete_1 = WebElement(driver, '//*[@id="delete-record-1"]/svg/path')
 
+        self.table_fname = WebElement(driver, 'div.rt-resizable-header-content')
+        self.table_lname = WebElement(driver, 'div.rt-resizable-header-content')
+        self.table_age = WebElement(driver, 'div.rt-resizable-header-content')
+
 
 
 

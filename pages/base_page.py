@@ -2,6 +2,7 @@
 #import time
 import logging
 from components.components import WebElement
+import requests
 
 class BasePage:
 
@@ -13,6 +14,22 @@ class BasePage:
 
     def visit(self):
         return self.driver.get(self.base_url)
+    def request (self):
+        request = requests.get(self.base_url)
+        if request.status_code == 200:
+            return True
+        return False
+
+
+        #try:
+          #  return self.driver.request.get(self.base_url)
+       # except requests.exceptions.ConnectionError:
+         #   return (f'URL {self.base_url} not reachable')
+
+        #request = requests.get(self.base_url)
+       # if request.status_code == 200:
+            #return True
+        #return False
 
     def back(self):
         self.driver.back()
@@ -37,11 +54,14 @@ class BasePage:
             logging.log(1, ex)
             return False
 
-    def __init__(self,driver, base_url):
+
+    def __init__(self, driver, base_url):
         self.driver = driver
         self.base_url = base_url
 
         self.metaView = WebElement(driver, 'head > meta')
+
+
 
 
 
