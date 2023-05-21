@@ -6,9 +6,9 @@ from pages.accordion import Accordion
 from pages.browser_page import Browser #BrowserTab
 
 @pytest.mark.parametrize('pages', [Accordion, Alert, DemoQa, Browser])
-def test_seo(browser, pages):
+def test_seo_meta(browser, pages):
     page = pages(browser)
-    #demo_qa_page = DemoQa(browser)
 
     page.visit()
-    assert page.get_title() == page.pageData['title']
+    assert page.metaView.get_dom_attribute('name') == 'viewport'
+    assert page.metaView.get_dom_attribute('content') == 'width=device-width,initial-scale=1'

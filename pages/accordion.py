@@ -8,6 +8,10 @@ class Accordion(BasePage):
         self.base_url = 'https://demoqa.com/accordian'
         super().__init__(driver, self.base_url)
 
+        self.pageData = {
+            'title': 'DEMOQA'
+        }
+
         self.text_element = WebElement(driver, '#section1Content > p')
         self.btn_sidebar = WebElement(driver,'#section1Heading')
 
