@@ -4,13 +4,14 @@ import pytest
 
 from pages.modal_page import Modal
 
-@pytest.mark.skipif('status_code == 400')
+#@pytest.mark.skipif(True, reason='просто пропуск')
 def test_check_modal(browser, request):
     check_mod = Modal(browser)
 
-
+    if not check_mod.request(): # функция request закинута в base_page
+        pytest.skip(reason=f'Страница {check_mod.base_url} недоступна')
     check_mod.visit()
-    assert check_mod.request() #функция request закинута в base_page
+
     assert not check_mod.alert()
     check_mod.btn_small.click()
     time.sleep(2)
@@ -26,6 +27,3 @@ def test_check_modal(browser, request):
     check_mod.btn_large_close.click()
     time.sleep(2)
     assert not check_mod.alert()
-   # assert
-    #check_mod.btn_large.click()
-

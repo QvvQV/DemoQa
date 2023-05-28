@@ -13,4 +13,5 @@ class Modal(BasePage):
         self.btn_large_close = WebElement(driver, '#closeLargeModal')
         self.title_sm = WebElement(driver, '#example-modal-sizes-title-sm')
         self.title_lr = WebElement(driver, '#example-modal-sizes-title-lg')
+        self.bar_sm = WebElement(driver, 'body > div.fade.modal.show > div > div')
 

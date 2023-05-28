@@ -16,9 +16,13 @@ class BasePage:
         return self.driver.get(self.base_url)
     def request (self):
         request = requests.get(self.base_url)
-        if request.status_code == 200:
-            return True
-        return False
+        return request.status_code == 200
+
+
+
+       # if request.status_code == 200:
+          #  return True
+      #  return False
 
 
         #try:
@@ -26,10 +30,6 @@ class BasePage:
        # except requests.exceptions.ConnectionError:
          #   return (f'URL {self.base_url} not reachable')
 
-        #request = requests.get(self.base_url)
-       # if request.status_code == 200:
-            #return True
-        #return False
 
     def back(self):
         self.driver.back()
