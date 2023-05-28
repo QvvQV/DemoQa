@@ -16,3 +16,4 @@ def test_slider(browser):
         break
 
     time.sleep(2)
+
