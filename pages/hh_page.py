@@ -30,6 +30,9 @@ class HeadHunter(BasePage):
         self.pis = WebElement(driver, 'div.bloko-form-row > textarea')
         self.but_niz = WebElement(driver, '#RESPONSE_MODAL_FORM_ID > div.vacancy-response-popup-body > div.bloko-gap.bloko-gap_top > button')
 
+        self.my_resume = WebElement(driver, '#HH-React-Root > div > div.supernova-navi-search-wrapper.supernova-navi-search-wrapper_expanded > div.supernova-navi-wrapper > div > div > div > div:nth-child(2) > a')
+        self.up = WebElement(driver, '#HH-React-Root > div > div.HH-MainContent.HH-Supernova-MainContent > div.main-content > div > div > div.bloko-column.bloko-column_container.bloko-column_xs-4.bloko-column_m-8.bloko-column_l-11 > div:nth-child(4) > div:nth-child(1) > div > div.applicant-resumes-actions-wrapper > div > div > div:nth-child(1) > span > button')
+
 
 
 

@@ -10,8 +10,8 @@ def test_HH(browser):
 
     #Регистрация
     wak.na_parol.click()
-    wak.parol.send_keys('c26a13S14p10e3r4')
-    wak.email.send_keys('vadimgol0779@gmail.com')
+    wak.parol.send_keys('c26a13e3r4')
+    wak.email.send_keys('vadimgol@gmail.com')
     wak.button.click_force()
     time.sleep(2)
 
@@ -50,3 +50,19 @@ def test_HH(browser):
     #проверка цвета кнопки и отпрака опросника
     assert wak.but_niz.check_css('backgroundColor', 'rgba(23, 133, 229, 1)')
     wak.but_niz.click()
+
+def test_up(browser):
+    wak = HeadHunter(browser)  # Вакансия
+
+    wak.visit()
+
+    # Регистрация
+    wak.na_parol.click()
+    wak.parol.send_keys('c26a130e3r4')
+    wak.email.send_keys('vadimgol@gmail.com')
+    wak.button.click_force()
+    time.sleep(2)
+
+    wak.my_resume.click()
+    time.sleep(1)
+    wak.up.click()
