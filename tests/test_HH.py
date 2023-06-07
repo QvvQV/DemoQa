@@ -41,7 +41,7 @@ def test_HH(browser):
     wak.pis.send_keys('Добрый день!' + '\n' +
                       'Путь до опросника и сам опросник заполнены роботом с промежуточными проверками ряда элементов на страницах' +
                       '\n' + 'Тесты писались на языке Phyton при помощи кроссплатформенной интегрированной среды разработки Pycharm' +
-                      '\n' + 'с использованием инструмента для автоматизации действий веб-браузера Selenium.' + '\n' +
+                      'с использованием инструмента для автоматизации действий веб-браузера Selenium.' + '\n' +
                       'Это сделано, чтобы привлечь ваше внимание. Ведь мною только закончены курсы в ИТМО.' + '\n' +
                       'Прилагаю ссылки кода на GitHub: https://github.com/QvvQV/DemoQa/blob/main/pages/hh_page.py, https://github.com/QvvQV/DemoQa/blob/main/tests/test_HH.py' + '\n'
                       'Надеюсь на положительный ответ, заранее спасибо')
@@ -50,6 +50,8 @@ def test_HH(browser):
     #проверка цвета кнопки и отпрака опросника
     assert wak.but_niz.check_css('backgroundColor', 'rgba(23, 133, 229, 1)')
     wak.but_niz.click()
+
+    time.sleep(1)
 
 def test_up(browser):
     wak = HeadHunter(browser)  # Вакансия
