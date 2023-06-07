@@ -1,7 +1,6 @@
 import time
 
 from pages.hh_page import HeadHunter
-from selenium.webdriver.common.keys import Keys
 
 def test_HH(browser):
 
@@ -46,6 +45,7 @@ def test_HH(browser):
                       'Это сделано, чтобы привлечь ваше внимание. Ведь мною только закончены курсы в ИТМО.' + '\n' +
                       'Прилагаю ссылки кода на GitHub: https://github.com/QvvQV/DemoQa/blob/main/pages/hh_page.py, https://github.com/QvvQV/DemoQa/blob/main/tests/test_HH.py' + '\n'
                       'Надеюсь на положительный ответ, заранее спасибо')
+    time.sleep(1)
 
     #проверка цвета кнопки и отпрака опросника
     assert wak.but_niz.check_css('backgroundColor', 'rgba(23, 133, 229, 1)')
